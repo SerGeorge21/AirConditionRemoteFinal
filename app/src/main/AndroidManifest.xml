@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".HelpActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,16 +17,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SleepActivity"
-                  android:parentActivityName=".MainActivity"/>
-        <activity android:name=".ModeActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".FanActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".SwingActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".TimerActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SleepActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ModeActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".FanActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SwingActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".TimerActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

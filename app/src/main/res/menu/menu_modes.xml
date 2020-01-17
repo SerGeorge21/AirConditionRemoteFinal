@@ -24,4 +24,8 @@
         android:id="@+id/action_fan"
         android:title="Fan Control"/>
 
+    <item
+        android:id="@+id/action_help"
+        android:title="! Help"/>
+
 </menu>

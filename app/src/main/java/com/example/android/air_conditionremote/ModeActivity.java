@@ -130,6 +130,11 @@ public class ModeActivity extends AppCompatActivity {
                 Intent fa = new Intent(getApplicationContext(), FanActivity.class);
                 startActivity(fa);
                 return true;
+            case R.id.action_help:
+                Intent he = new Intent(getApplicationContext(), HelpActivity.class);
+                startActivity(he);
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }

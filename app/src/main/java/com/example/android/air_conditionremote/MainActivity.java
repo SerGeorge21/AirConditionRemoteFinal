@@ -24,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int d = Integer.parseInt(degrees.getText().toString());
-                d--;
-                degrees.setText(Integer.toString(d));
+                if(d>0) {
+                    d--;
+                    degrees.setText(Integer.toString(d));
+                }
             }
         });
 
@@ -35,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int d = Integer.parseInt(degrees.getText().toString());
-                d++;
-                degrees.setText(Integer.toString(d));
+                if(d<30) {
+                    d++;
+                    degrees.setText(Integer.toString(d));
+                }
             }
         });
 
@@ -94,6 +98,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent fa = new Intent(getApplicationContext(), FanActivity.class);
                 startActivity(fa);
                 return true;
+            case R.id.action_help:
+                Intent he = new Intent(getApplicationContext(), HelpActivity.class);
+                startActivity(he);
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }

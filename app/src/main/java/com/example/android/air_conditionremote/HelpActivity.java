@@ -1,57 +1,19 @@
 package com.example.android.air_conditionremote;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-public class FanActivity extends AppCompatActivity {
+public class HelpActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fan);
-
-        //Get the "Back Arrow" on Action Bar to show
-        //getActionBar().setDisplayHomeAsUpEnabled(true);
-
-        //When a button is pressed we want only this one to be colored
-        //that way we know what fan-mode it's in
-        final Button low = findViewById(R.id.low_fan);
-        final Button mid = findViewById(R.id.mid_fan);
-        final Button high = findViewById(R.id.high_fan);
-        low.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                low.setBackgroundColor(Color.GREEN);
-                mid.setBackgroundColor(Color.GRAY);//MAYBE?
-                high.setBackgroundColor(Color.GRAY);//MAYBE?
-            }
-        });
-
-        mid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                low.setBackgroundColor(Color.GRAY);//MAYBE?
-                mid.setBackgroundColor(Color.YELLOW);
-                high.setBackgroundColor(Color.GRAY);//MAYBE?
-            }
-        });
-
-        high.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                low.setBackgroundColor(Color.GRAY);//MAYBE?
-                mid.setBackgroundColor(Color.GRAY);//MAYBE??
-                high.setBackgroundColor(Color.RED );
-            }
-        });
+        setContentView(R.layout.activity_help);
     }
+
 
 
     @Override
@@ -100,5 +62,4 @@ public class FanActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }
